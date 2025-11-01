@@ -1,4 +1,4 @@
-# 🏥 Hospital TAVARES MURILO
+# 🏥 Hospital 
 
 Sistema hospitalar desenvolvido em **Java com Spring Boot**, com arquitetura baseada no padrão **MVC (Model-View-Controller)**.  
 O projeto tem como objetivo gerenciar informações hospitalares como **pacientes, funcionários, consultas, receitas, salas e estoques**, de forma organizada e segura.
@@ -177,7 +177,7 @@ Basta ajustar as configurações em `application.properties` ou `application.yml
 
 ## 💡 Autor
 
-👤 **Murilo Tavares**  
+👤 **Davi Tavares**  
 📧 [github.com/bessa2121](https://github.com/bessa2121)  
 💻 Projeto acadêmico desenvolvido para fins educacionais.
 
