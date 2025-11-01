@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pacientes</title>
+    <link rel="stylesheet" th:href="@{/css/layout.css}" />
+</head>
+<body>
+<h2>Pacientes</h2>
+
+<div class="actions">
+    <a href="/pacientes/new" class="btn btn-primary">Novo paciente</a>
+</div>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>CPF</th>
+        <th colspan="2">Ações</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="p : ${pacientes}">
+        <td th:text="${p.idPaciente}">1</td>
+        <td th:text="${p.nome}">Nome</td>
+        <td th:text="${p.cpf}">CPF</td>
+        <td>
+            <a th:href="@{'/pacientes/' + ${p.idPaciente}}" class="btn btn-info">Ver</a>
+            <a th:href="@{'/pacientes/editar/' + ${p.idPaciente}}" class="btn btn-warning">Editar</a>
+        </td>
+        <td>
+            <form th:action="@{'/pacientes/delete/' + ${p.idPaciente}}" method="post" style="display:inline">
+                <button type="submit" class="btn btn-danger" onclick="return confirm('Tem certeza que deseja excluir este paciente?');">Excluir</button>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
